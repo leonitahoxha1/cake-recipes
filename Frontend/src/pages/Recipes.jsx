@@ -270,7 +270,57 @@ function Recipes() {
         >
 
             {/* NAVBAR */}
+<div
+    style={{
+        background: '#f8f5ef',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '15px 25px',
+        borderBottom: '1px solid #ece7de',
+        flexWrap: 'wrap',
+        gap: '15px'
+    }}
+>
 
+    <h1
+        style={{
+            color: '#234b3a',
+            fontSize: '28px',
+            margin: '0'
+        }}
+    >
+        Recipes 🍰
+    </h1>
+
+    <div
+        style={{
+            display: 'flex',
+            gap: '20px',
+            flexWrap: 'wrap',
+            fontSize: '15px'
+        }}
+    >
+        <p>Home</p>
+        <p>Recipes</p>
+        <p>Blog</p>
+        <p>Contact</p>
+    </div>
+
+    <button
+        style={{
+            background: '#234b3a',
+            color: 'white',
+            border: 'none',
+            padding: '10px 20px',
+            borderRadius: '30px',
+            cursor: 'pointer'
+        }}
+    >
+        Subscribe
+    </button>
+
+</div>
          
             {/* HERO */}
 
