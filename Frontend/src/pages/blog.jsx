@@ -27,7 +27,7 @@ function Blog() {
         },
 
         {
-            title: 'Best Homemade Bread',
+            title: 'Homemade Bread',
             category: 'BAKING',
             image: 'https://images.pexels.com/photos/209206/pexels-photo-209206.jpeg',
             text:
