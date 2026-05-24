@@ -52,4 +52,77 @@ function Blog() {
 
     ]
 
-    
+    return (
+
+        <div
+            style={{
+                background: '#f8f5ef',
+                minHeight: '100vh',
+                fontFamily: 'Arial, sans-serif'
+            }}
+        >
+
+            {/* HERO */}
+
+            <div
+                style={{
+                    height: '320px',
+
+                    backgroundImage:
+                        'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg)',
+
+                    backgroundSize: 'cover',
+
+                    backgroundPosition: 'center',
+
+                    display: 'flex',
+
+                    alignItems: 'center'
+                }}
+            >
+
+                <div
+                    style={{
+                        paddingLeft: '80px'
+                    }}
+                >
+
+                    <p
+                        style={{
+                            color: '#d4a762',
+                            letterSpacing: '2px',
+                            fontSize: '13px'
+                        }}
+                    >
+                        FROM THE KITCHEN
+                    </p>
+
+                    <h1
+                        style={{
+                            color: 'white',
+                            fontSize: '60px',
+                            margin: '10px 0'
+                        }}
+                    >
+                        The Blog
+                    </h1>
+
+                    <p
+                        style={{
+                            color: '#eee',
+                            maxWidth: '500px',
+                            lineHeight: '30px',
+                            fontSize: '18px'
+                        }}
+                    >
+                        Technique guides, ingredient ideas and
+                        seasonal cooking inspiration from our team.
+                    </p>
+
+                </div>
+
+            </div>
+
+            {/* BLOG CARDS */}
+
+            
