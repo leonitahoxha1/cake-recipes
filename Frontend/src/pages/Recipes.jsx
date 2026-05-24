@@ -85,7 +85,7 @@ function Recipes() {
                 style={{
                     height: '420px',
                     backgroundImage:
-                        'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://images.unsplash.com/photo-1490645935967-10de6ba17061)',
+                        'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://wallpapers.com/images/hd/food-4k-3gsi5u6kjma5zkj0.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     display: 'flex',
@@ -155,6 +155,7 @@ function Recipes() {
                         
                         'Drinks',
                         'Traditcional',
+
 
                     ].map((item) => (
 
@@ -265,13 +266,13 @@ function Recipes() {
                                     View Recipe
                                 </button>
 
+
                             </div>
 
                         </div>
 
                     ))
                 }
-
             </div>
 
         </div>
