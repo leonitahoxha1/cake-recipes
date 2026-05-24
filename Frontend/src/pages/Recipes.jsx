@@ -273,12 +273,25 @@ function Recipes() {
 <div
     style={{
         background: '#f8f5ef',
+
+        position: 'sticky',
+
+        top: '0',
+
+        zIndex: '1000',
+
         display: 'flex',
+
         justifyContent: 'space-between',
+
         alignItems: 'center',
+
         padding: '15px 25px',
+
         borderBottom: '1px solid #ece7de',
+
         flexWrap: 'wrap',
+
         gap: '15px'
     }}
 >
@@ -286,7 +299,9 @@ function Recipes() {
     <h1
         style={{
             color: '#234b3a',
+
             fontSize: '28px',
+
             margin: '0'
         }}
     >
@@ -296,24 +311,35 @@ function Recipes() {
     <div
         style={{
             display: 'flex',
+
             gap: '20px',
+
             flexWrap: 'wrap',
+
             fontSize: '15px'
         }}
     >
         <p>Home</p>
+
         <p>Recipes</p>
+
         <p>Blog</p>
+
         <p>Contact</p>
     </div>
 
     <button
         style={{
             background: '#234b3a',
+
             color: 'white',
+
             border: 'none',
+
             padding: '10px 20px',
+
             borderRadius: '30px',
+
             cursor: 'pointer'
         }}
     >
@@ -324,55 +350,75 @@ function Recipes() {
          
             {/* HERO */}
 
-            <div
-                style={{
-                    height: '420px',
-                    backgroundImage:
-                        'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://wallpapers.com/images/hd/food-4k-3gsi5u6kjma5zkj0.jpg)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    display: 'flex',
-                    alignItems: 'center',
-                    padding: '0 70px'
-                }}
-            >
+           <div
+    style={{
+        height: '420px',
 
-                <div>
+        backgroundImage:
+            'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://wallpapers.com/images/hd/food-4k-3gsi5u6kjma5zkj0.jpg)',
 
-                    <p
-                        style={{
-                            color: '#ddd',
-                            letterSpacing: '3px'
-                        }}
-                    >
-                        THE COLLECTION
-                    </p>
+        backgroundSize: 'cover',
 
-                    <h1
-                        style={{
-                            color: 'white',
-                            fontSize: '70px',
-                            margin: '10px 0'
-                        }}
-                    >
-                        All Recipes
-                    </h1>
+        backgroundPosition: 'center',
 
-                    <p
-                        style={{
-                            color: '#eee',
-                            fontSize: '18px',
-                            maxWidth: '600px',
-                            lineHeight: '30px'
-                        }}
-                    >
-                        Discover delicious recipes and food ideas
-                        from around the world.
-                    </p>
+        display: 'flex',
 
-                </div>
+        justifyContent: 'center',
 
-            </div>
+        alignItems: 'center',
+
+        textAlign: 'center',
+
+        padding: '0 20px'
+    }}
+>
+
+    <div>
+
+        <p
+            style={{
+                color: '#ddd',
+
+                letterSpacing: '3px',
+
+                fontSize: '14px'
+            }}
+        >
+            THE COLLECTION
+        </p>
+
+        <h1
+            style={{
+                color: 'white',
+
+                fontSize: '32px',
+
+                margin: '10px 0',
+
+                lineHeight: '40px'
+            }}
+        >
+            All Recipes
+        </h1>
+
+        <p
+            style={{
+                color: '#eee',
+
+                fontSize: '15px',
+
+                maxWidth: '500px',
+
+                lineHeight: '26px'
+            }}
+        >
+            Discover delicious recipes and food ideas
+            from around the world.
+        </p>
+
+    </div>
+
+</div>
 
             {/* CATEGORY BUTTONS */}
 
@@ -423,90 +469,95 @@ function Recipes() {
             </div>
 
             {/* RECIPES */}
-
-      <div
+<div
     style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
+
+        gridTemplateColumns:
+            'repeat(auto-fit,minmax(260px,1fr))',
+
         gap: '25px',
-        padding: '30px 50px 70px',
+
+        padding: '30px 20px 70px',
+
         maxWidth: '1400px',
+
         margin: '0 auto'
     }}
 >
-                {
-                    recipes.map((recipe, index) => (
 
-                        <div
-                            key={index}
-                            style={{
-                                background: 'white',
-                                borderRadius: '18px',
-                                overflow: 'hidden',
-                                boxShadow:
-                                    '0 5px 15px rgba(0,0,0,0.06)'
-                            }}
-                        >
+    {
+        recipes.map((recipe, index) => (
 
-                            <img
-                                src={recipe.image}
-                                alt=""
-                                style={{
-                                    width: '100%',
-                                    height: '220px',
-                                    objectFit: 'cover'
-                                }}
-                            />
+            <div
+                key={index}
+                style={{
+                    background: 'white',
+                    borderRadius: '18px',
+                    overflow: 'hidden',
+                    boxShadow:
+                        '0 5px 15px rgba(0,0,0,0.06)'
+                }}
+            >
 
-                            <div
-                                style={{
-                                    padding: '20px'
-                                }}
-                            >
+                <img
+                    src={recipe.image}
+                    alt=""
+                    style={{
+                        width: '100%',
+                        height: '220px',
+                        objectFit: 'cover'
+                    }}
+                />
 
-                                <h2
-                                    style={{
-                                        color: '#234b3a',
-                                        fontSize: '24px'
-                                    }}
-                                >
-                                    {recipe.title}
-                                </h2>
+                <div
+                    style={{
+                        padding: '20px'
+                    }}
+                >
 
-                                <p
-                                    style={{
-                                        color: '#666',
-                                        lineHeight: '25px',
-                                        fontSize: '14px'
-                                    }}
-                                >
-                                    Delicious recipes made with fresh
-                                    ingredients and amazing flavor.
-                                </p>
+                    <h2
+                        style={{
+                            color: '#234b3a',
+                            fontSize: '24px'
+                        }}
+                    >
+                        {recipe.title}
+                    </h2>
 
-                                <button
-                                    style={{
-                                        marginTop: '15px',
-                                        background: '#234b3a',
-                                        color: 'white',
-                                        border: 'none',
-                                        padding: '10px 18px',
-                                        borderRadius: '25px',
-                                        cursor: 'pointer'
-                                    }}
-                                >
-                                    View Recipe
-                                </button>
+                    <p
+                        style={{
+                            color: '#666',
+                            lineHeight: '25px',
+                            fontSize: '14px'
+                        }}
+                    >
+                        Delicious recipes made with fresh
+                        ingredients and amazing flavor.
+                    </p>
 
-                            </div>
+                    <button
+                        style={{
+                            marginTop: '15px',
+                            background: '#234b3a',
+                            color: 'white',
+                            border: 'none',
+                            padding: '10px 18px',
+                            borderRadius: '25px',
+                            cursor: 'pointer'
+                        }}
+                    >
+                        View Recipe
+                    </button>
 
-                        </div>
-
-                    ))
-                }
+                </div>
 
             </div>
 
+        ))
+    }
+
+</div>
             {/* FOOTER */}
 
             <div
