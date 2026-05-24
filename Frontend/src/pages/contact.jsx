@@ -202,3 +202,50 @@ function Contact() {
                         }}
                     />
 
+                    <textarea
+                        placeholder="Your Message"
+                        rows="7"
+                        style={{
+                            width: '100%',
+                            padding: '15px',
+                            borderRadius: '12px',
+                            border: '1px solid #ddd',
+                            outline: 'none',
+                            marginTop: '20px',
+                            resize: 'none',
+                            boxSizing: 'border-box'
+                        }}
+                    />
+
+                    <button
+                        style={{
+                            marginTop: '25px',
+
+                            background: '#234b3a',
+
+                            color: 'white',
+
+                            border: 'none',
+
+                            padding: '14px 28px',
+
+                            borderRadius: '30px',
+
+                            cursor: 'pointer',
+
+                            fontSize: '15px'
+                        }}
+                    >
+                        Send Message
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    )
+}
+
+export default Contact
