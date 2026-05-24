@@ -3,7 +3,7 @@ function Blog() {
     const blogs = [
 
         {
-            title: 'The Art of Slow Cooking',
+            title: 'Slow Cooking',
             category: 'TECHNIQUE',
             image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
             text:
