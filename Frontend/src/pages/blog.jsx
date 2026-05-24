@@ -125,4 +125,133 @@ function Blog() {
 
             {/* BLOG CARDS */}
 
-            
+            <div
+                style={{
+                    display: 'grid',
+
+                    gridTemplateColumns:
+                        'repeat(auto-fit,minmax(320px,1fr))',
+
+                    gap: '35px',
+
+                    maxWidth: '1200px',
+
+                    margin: '0 auto',
+
+                    padding: '70px 30px'
+                }}
+            >
+
+                {
+                    blogs.map((blog, index) => (
+
+                        <div
+                            key={index}
+                            style={{
+                                background: 'white',
+
+                                borderRadius: '18px',
+
+                                overflow: 'hidden',
+
+                                boxShadow:
+                                    '0 5px 15px rgba(0,0,0,0.08)'
+                            }}
+                        >
+
+                            <img
+                                src={blog.image}
+                                alt=""
+
+                                style={{
+                                    width: '100%',
+
+                                    height: '220px',
+
+                                    objectFit: 'cover'
+                                }}
+                            />
+
+                            <div
+                                style={{
+                                    padding: '22px'
+                                }}
+                            >
+
+                                <span
+                                    style={{
+                                        background: '#d4a762',
+
+                                        color: 'white',
+
+                                        padding: '6px 12px',
+
+                                        borderRadius: '20px',
+
+                                        fontSize: '12px'
+                                    }}
+                                >
+                                    {blog.category}
+                                </span>
+
+                                <h2
+                                    style={{
+                                        color: '#234b3a',
+
+                                        marginTop: '20px',
+
+                                        fontSize: '28px',
+
+                                        lineHeight: '38px'
+                                    }}
+                                >
+                                    {blog.title}
+                                </h2>
+
+                                <p
+                                    style={{
+                                        color: '#666',
+
+                                        lineHeight: '28px',
+
+                                        marginTop: '15px'
+                                    }}
+                                >
+                                    {blog.text}
+                                </p>
+
+                                <button
+                                    style={{
+                                        marginTop: '20px',
+
+                                        background: '#234b3a',
+
+                                        color: 'white',
+
+                                        border: 'none',
+
+                                        padding: '12px 22px',
+
+                                        borderRadius: '30px',
+
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    Read More
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    ))
+                }
+
+            </div>
+
+        </div>
+
+    )
+}
+
+export default Blog
