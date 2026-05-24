@@ -1,263 +1,277 @@
+import { useState } from 'react'
+
 function Recipes() {
 
-    const recipes = [
+    const [selectedCategory, setSelectedCategory] = useState('All')
 
-        {
-            title: 'Chocolate Cake',
-            image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587'
-        },
+   const recipes = [
 
-        {
-            title: 'Pancakes',
-            image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93'
-        },
+{
+    title: 'Red Velvet Cake',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg'
+},
 
-        {
-            title: 'Healthy Salad',
-            image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c'
-        },
+{
+    title: 'Strawberry Cake',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg'
+},
 
-        {
-            title: 'Burger',
-            image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd'
-        },
+{
+    title: 'Chocolate Donuts',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/4686960/pexels-photo-4686960.jpeg'
+},
 
-        {
-            title: 'Pizza',
-            image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591'
-        },
+{
+    title: 'Macarons',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/239578/pexels-photo-239578.jpeg'
+},
 
-        {
-            title: 'Pasta',
-            image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9'
-        },
+{
+    title: 'Tiramisu',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/6880219/pexels-photo-6880219.jpeg'
+},
 
-        {
-            title: 'Ice Cream',
-            image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb'
-        },
+{
+    title: 'Cheesecake',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg'
+},
 
-        {
-            title: 'Tacos',
-            image: 'https://images.unsplash.com/photo-1552332386-f8dd00dc2f85'
-        },
+{
+    title: 'Cookies',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg'
+},
 
-        {
-            title: 'Donuts',
-            image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307'
-        },
+{
+    title: 'Brownies',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/9170501/pexels-photo-9170501.jpeg'
+},
 
-        {
-            title: 'Roasted Chicken',
-            image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836'
-        },
+{
+    title: 'Cupcakes',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg'
+},
 
-        {
-            title: 'French Toast',
-            image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929'
-        },
+{
+    title: 'Chocolate Cake',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/533325/pexels-photo-533325.jpeg'
+},
 
-        {
-            title: 'Sushi',
-            image: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c'
-        },
+{
+    title: 'Pancakes',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg'
+},
 
-        {
-            title: 'Steak',
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947'
-        },
+{
+    title: 'Ice Cream',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg'
+},
 
-        {
-            title: 'Cupcakes',
-            image: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d'
-        },
+{
+    title: 'Donuts',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/4686960/pexels-photo-4686960.jpeg'
+},
 
-        {
-            title: 'Fruit Bowl',
-            image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea'
-        },
+{
+    title: 'Milkshake',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/3727250/pexels-photo-3727250.jpeg'
+},
 
-        {
-            title: 'Waffles',
-            image: 'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0'
-        },
+{
+    title: 'Iced Coffee',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+},
 
-        {
-            title: 'Macarons',
-            image: 'https://images.unsplash.com/photo-1558326567-98ae2405596b'
-        },
+{
+    title: 'Orange Juice',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg'
+},
 
-        {
-            title: 'Lasagna',
-            image: 'https://images.unsplash.com/photo-1619895092538-128341789043'
-        },
+{
+    title: 'Berry Smoothie',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg'
+},
 
-        {
-            title: 'Chicken Salad',
-            image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1'
-        },
+{
+    title: 'Mango Juice',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg'
+},
 
-        {
-            title: 'Mojito',
-            image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd'
-        },
+{
+    title: 'Smoothie',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg'
+},
 
-        {
-            title: 'Brownies',
-            image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c'
-        },
+{
+    title: 'Lemonade',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg'
+},
 
-        {
-            title: 'Hot Dog',
-            image: 'https://images.unsplash.com/photo-1619740455993-9e612b1af08a'
-        },
+{
+    title: 'Cappuccino',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'
+},
 
-        {
-            title: 'Nachos',
-            image: 'https://images.unsplash.com/photo-1513456852971-30c0b8199d4d'
-        },
+{
+    title: 'Mojito',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg'
+},
 
-        {
-            title: 'Milkshake',
-            image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767'
-        },
+{
+    title: 'Fruit Juice',
+    category: 'Drinks',
+    image: 'https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg'
+},
 
-        {
-            title: 'Croissant',
-            image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff'
-        },
+{
+    title: 'Greek Salad',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg'
+},
 
-        {
-            title: 'Omelette',
-            image: 'https://images.unsplash.com/photo-1510693206972-df098062cb71'
-        },
+{
+    title: 'Vegetable Bowl',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
+},
 
-        {
-            title: 'Fried Rice',
-            image: 'https://images.unsplash.com/photo-1512058564366-c9e3c3d1b2a2'
-        },
+{
+    title: 'Healthy Sandwich',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg'
+},
 
-        {
-            title: 'Spaghetti',
-            image: 'https://images.unsplash.com/photo-1622973536968-3ead9e780960'
-        },
+{
+    title: 'Salmon Dish',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg'
+},
 
-        {
-            title: 'Cheesecake',
-            image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad'
-        },
+{
+    title: 'Fruit Plate',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg'
+},
 
-        {
-            title: 'Smoothie',
-            image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc'
-        },
+{
+    title: 'Healthy Bowl',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
+},
 
-        {
-            title: 'Avocado Toast',
-            image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8'
-        },
+{
+    title: 'Avocado Toast',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg'
+},
 
-        {
-            title: 'Soup',
-            image: 'https://images.unsplash.com/photo-1547592180-85f173990554'
-        },
+{
+    title: 'Healthy Salad',
+    category: 'Healthy',
+    image: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg'
+},
 
-        {
-            title: 'BBQ Ribs',
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947'
-        },
+{
+    title: 'Traditional Pizza',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg'
+},
 
-        {
-            title: 'Cookies',
-            image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e'
-        },
+{
+    title: 'Traditional Pasta',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg'
+},
 
-        {
-            title: 'Apple Pie',
-            image: 'https://images.unsplash.com/photo-1568571780765-9276ac8b75a2'
-        },
+{
+    title: 'Grilled Chicken',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/616354/pexels-photo-616354.jpeg'
+},
 
-        {
-            title: 'Seafood Pasta',
-            image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141'
-        },
+{
+    title: 'Rice Bowl',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg'
+},
 
-        {
-            title: 'Cappuccino',
-            image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085'
-        },
+{
+    title: 'Fish Plate',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/3296279/pexels-photo-3296279.jpeg'
+},
 
-        {
-            title: 'Falafel',
-            image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd'
-        },
+{
+    title: 'Pizza',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg'
+},
 
-        {
-            title: 'Fried Chicken',
-            image: 'https://images.unsplash.com/photo-1562967916-eb82221dfb92'
-        },
+{
+    title: 'Lasagna',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/5949888/pexels-photo-5949888.jpeg'
+},
 
-        {
-            title: 'Ramen',
-            image: 'https://images.unsplash.com/photo-1557872943-16a5ac26437e'
-        },
+{
+    title: 'Spaghetti',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg'
+},
 
-        {
-            title: 'Burrito',
-            image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f'
-        },
+{
+    title: 'Tacos',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg'
+},
 
-        {
-            title: 'Pudding',
-            image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777'
-        },
+{
+    title: 'Ramen',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg'
+},
 
-        {
-            title: 'Frappe',
-            image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735'
-        },
+{
+    title: 'Burger',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg'
+},
 
-        {
-            title: 'Shrimp',
-            image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38'
-        },
+{
+    title: 'Pasta',
+    category: 'Traditional',
+    image: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg'
+}
+]
 
-        {
-            title: 'Tiramisu',
-            image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9'
-        },
-
-        {
-            title: 'Dumplings',
-            image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950'
-        },
-
-        {
-            title: 'Lemonade',
-            image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd'
-        },
-
-        {
-            title: 'Crepes',
-            image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548'
-        },
-
-        {
-            title: 'Grilled Fish',
-            image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2'
-        },
-
-        {
-            title: 'Muffins',
-            image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa'
-        },
-
-        {
-            title: 'Fruit Juice',
-            image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4'
-        }
-
-    ]
+    const filteredRecipes =
+        selectedCategory === 'All'
+            ? recipes
+            : recipes.filter(
+                (recipe) =>
+                    recipe.category === selectedCategory
+            )
 
     return (
 
@@ -265,6 +279,7 @@ function Recipes() {
             style={{
                 background: '#f8f5ef',
                 minHeight: '100vh',
+                overflowX: 'hidden',
                 fontFamily: 'Arial, sans-serif'
             }}
         >
@@ -272,11 +287,15 @@ function Recipes() {
             {/* NAVBAR */}
 <div
     style={{
-        background: '#f8f5ef',
+        background: '#fff4df',
 
-        position: 'sticky',
+        position: 'fixed',
 
         top: '0',
+
+        left: '0',
+
+        width: '100%',
 
         zIndex: '1000',
 
@@ -292,7 +311,9 @@ function Recipes() {
 
         flexWrap: 'wrap',
 
-        gap: '15px'
+        gap: '15px',
+
+        boxSizing: 'border-box'
     }}
 >
 
@@ -305,7 +326,7 @@ function Recipes() {
             margin: '0'
         }}
     >
-        Recipes 🍰
+        Recipe 🍰
     </h1>
 
     <div
@@ -319,13 +340,65 @@ function Recipes() {
             fontSize: '15px'
         }}
     >
-        <p>Home</p>
+        <a
+    href="/"
+    style={{
+        textDecoration: 'none',
+        color: '#234b3a',
+        padding: '10px 18px',
+        borderRadius: '25px',
+        transition: '0.3s',
+        fontWeight: '600',
+        background: '#f3ead7'
+    }}
+>
+    Home
+</a>
 
-        <p>Recipes</p>
+<a
+    href="/recipes"
+    style={{
+        textDecoration: 'none',
+        color: '#234b3a',
+        padding: '10px 18px',
+        borderRadius: '25px',
+        transition: '0.3s',
+        fontWeight: '600',
+        background: '#f3ead7'
+    }}
+>
+    Recipes
+</a>
 
-        <p>Blog</p>
+<a
+    href="/blog"
+    style={{
+        textDecoration: 'none',
+        color: '#234b3a',
+        padding: '10px 18px',
+        borderRadius: '25px',
+        transition: '0.3s',
+        fontWeight: '600',
+        background: '#f3ead7'
+    }}
+>
+    Blog
+</a>
 
-        <p>Contact</p>
+<a
+    href="/contact"
+    style={{
+        textDecoration: 'none',
+        color: '#234b3a',
+        padding: '10px 18px',
+        borderRadius: '25px',
+        transition: '0.3s',
+        fontWeight: '600',
+        background: '#f3ead7'
+    }}
+>
+    Contact
+</a>
     </div>
 
     <button
@@ -347,78 +420,78 @@ function Recipes() {
     </button>
 
 </div>
-         
+
             {/* HERO */}
 
-           <div
-    style={{
-        height: '420px',
+            <div
+                style={{
+                    height: '420px',
 
-        backgroundImage:
-            'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://wallpapers.com/images/hd/food-4k-3gsi5u6kjma5zkj0.jpg)',
+                    backgroundImage:
+                        'linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(https://wallpapers.com/images/hd/food-4k-3gsi5u6kjma5zkj0.jpg)',
 
-        backgroundSize: 'cover',
+                    backgroundSize: 'cover',
 
-        backgroundPosition: 'center',
+                    backgroundPosition: 'center',
 
-        display: 'flex',
+                    display: 'flex',
 
-        justifyContent: 'center',
+                    justifyContent: 'center',
 
-        alignItems: 'center',
+                    alignItems: 'center',
 
-        textAlign: 'center',
+                    textAlign: 'center',
 
-        padding: '0 20px'
-    }}
->
+                    padding: '0 20px'
+                }}
+            >
 
-    <div>
+                <div>
 
-        <p
-            style={{
-                color: '#ddd',
+                    <p
+                        style={{
+                            color: '#ddd',
 
-                letterSpacing: '3px',
+                            letterSpacing: '3px',
 
-                fontSize: '14px'
-            }}
-        >
-            THE COLLECTION
-        </p>
+                            fontSize: '14px'
+                        }}
+                    >
+                        THE COLLECTION
+                    </p>
 
-        <h1
-            style={{
-                color: 'white',
+                    <h1
+                        style={{
+                            color: 'white',
 
-                fontSize: '32px',
+                            fontSize: '32px',
 
-                margin: '10px 0',
+                            margin: '10px 0',
 
-                lineHeight: '40px'
-            }}
-        >
-            All Recipes
-        </h1>
+                            lineHeight: '40px'
+                        }}
+                    >
+                        All Recipes
+                    </h1>
 
-        <p
-            style={{
-                color: '#eee',
+                    <p
+                        style={{
+                            color: '#eee',
 
-                fontSize: '15px',
+                            fontSize: '15px',
 
-                maxWidth: '500px',
+                            maxWidth: '500px',
 
-                lineHeight: '26px'
-            }}
-        >
-            Discover delicious recipes and food ideas
-            from around the world.
-        </p>
+                            lineHeight: '26px'
+                        }}
+                    >
+                        Discover delicious recipes and food ideas
+                        from around the world.
+                    </p>
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
             {/* CATEGORY BUTTONS */}
 
@@ -427,7 +500,7 @@ function Recipes() {
                     display: 'flex',
                     gap: '15px',
                     flexWrap: 'wrap',
-                    padding: '40px 50px 10px'
+                    padding: '40px 20px 10px'
                 }}
             >
 
@@ -442,21 +515,31 @@ function Recipes() {
 
                         <button
                             key={item}
+
+                            onClick={() =>
+                                setSelectedCategory(item)
+                            }
+
                             style={{
                                 padding: '10px 18px',
+
                                 borderRadius: '30px',
-                                border:
-                                    item === 'All'
-                                        ? 'none'
-                                        : '1px solid #ddd',
+
                                 background:
-                                    item === 'All'
+                                    selectedCategory === item
                                         ? '#234b3a'
                                         : 'white',
+
                                 color:
-                                    item === 'All'
+                                    selectedCategory === item
                                         ? 'white'
                                         : '#333',
+
+                                border:
+                                    selectedCategory === item
+                                        ? 'none'
+                                        : '1px solid #ddd',
+
                                 cursor: 'pointer'
                             }}
                         >
@@ -469,95 +552,97 @@ function Recipes() {
             </div>
 
             {/* RECIPES */}
-<div
-    style={{
-        display: 'grid',
-
-        gridTemplateColumns:
-            'repeat(auto-fit,minmax(260px,1fr))',
-
-        gap: '25px',
-
-        padding: '30px 20px 70px',
-
-        maxWidth: '1400px',
-
-        margin: '0 auto'
-    }}
->
-
-    {
-        recipes.map((recipe, index) => (
 
             <div
-                key={index}
                 style={{
-                    background: 'white',
-                    borderRadius: '18px',
-                    overflow: 'hidden',
-                    boxShadow:
-                        '0 5px 15px rgba(0,0,0,0.06)'
+                    display: 'grid',
+
+                    gridTemplateColumns:
+                        'repeat(auto-fit,minmax(260px,1fr))',
+
+                    gap: '25px',
+
+                    padding: '30px 20px 70px',
+
+                    maxWidth: '1400px',
+
+                    margin: '0 auto'
                 }}
             >
 
-                <img
-                    src={recipe.image}
-                    alt=""
-                    style={{
-                        width: '100%',
-                        height: '220px',
-                        objectFit: 'cover'
-                    }}
-                />
+                {
+                    filteredRecipes.map((recipe, index) => (
 
-                <div
-                    style={{
-                        padding: '20px'
-                    }}
-                >
+                        <div
+                            key={index}
+                            style={{
+                                background: 'white',
+                                borderRadius: '18px',
+                                overflow: 'hidden',
+                                boxShadow:
+                                    '0 5px 15px rgba(0,0,0,0.06)'
+                            }}
+                        >
 
-                    <h2
-                        style={{
-                            color: '#234b3a',
-                            fontSize: '24px'
-                        }}
-                    >
-                        {recipe.title}
-                    </h2>
+                            <img
+                                src={recipe.image}
+                                alt=""
+                                style={{
+                                    width: '100%',
+                                    height: '220px',
+                                    objectFit: 'cover'
+                                }}
+                            />
 
-                    <p
-                        style={{
-                            color: '#666',
-                            lineHeight: '25px',
-                            fontSize: '14px'
-                        }}
-                    >
-                        Delicious recipes made with fresh
-                        ingredients and amazing flavor.
-                    </p>
+                            <div
+                                style={{
+                                    padding: '20px'
+                                }}
+                            >
 
-                    <button
-                        style={{
-                            marginTop: '15px',
-                            background: '#234b3a',
-                            color: 'white',
-                            border: 'none',
-                            padding: '10px 18px',
-                            borderRadius: '25px',
-                            cursor: 'pointer'
-                        }}
-                    >
-                        View Recipe
-                    </button>
+                                <h2
+                                    style={{
+                                        color: '#234b3a',
+                                        fontSize: '24px'
+                                    }}
+                                >
+                                    {recipe.title}
+                                </h2>
 
-                </div>
+                                <p
+                                    style={{
+                                        color: '#666',
+                                        lineHeight: '25px',
+                                        fontSize: '14px'
+                                    }}
+                                >
+                                    Delicious recipes made with fresh
+                                    ingredients and amazing flavor.
+                                </p>
+
+                                <button
+                                    style={{
+                                        marginTop: '15px',
+                                        background: '#234b3a',
+                                        color: 'white',
+                                        border: 'none',
+                                        padding: '10px 18px',
+                                        borderRadius: '25px',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    View Recipe
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    ))
+                }
 
             </div>
 
-        ))
-    }
-
-</div>
             {/* FOOTER */}
 
             <div
@@ -573,7 +658,7 @@ function Recipes() {
                         color: '#d4a762'
                     }}
                 >
-                    Recipes 🍰
+                    Recipe
                 </h1>
 
                 <p
@@ -583,8 +668,7 @@ function Recipes() {
                         lineHeight: '28px'
                     }}
                 >
-                    Bringing delicious recipes and food inspiration
-                    from around the world.
+                 
                 </p>
 
                 <div
