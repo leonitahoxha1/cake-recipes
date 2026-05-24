@@ -83,6 +83,16 @@ function Recipes() {
     category: 'Desserts',
     image: 'https://images.pexels.com/photos/4686960/pexels-photo-4686960.jpeg'
 },
+{
+    title: 'Cake',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/16544183/pexels-photo-16544183.jpeg'
+},
+{
+    title: 'Orange',
+    category: 'Desserts',
+    image: 'https://images.pexels.com/photos/14996603/pexels-photo-14996603.jpeg'
+},
 
 {
     title: 'Milkshake',
