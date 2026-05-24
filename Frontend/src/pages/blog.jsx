@@ -43,7 +43,7 @@ function Blog() {
         },
 
         {
-            title: 'Fresh Summer Salads',
+            title: 'Summer Salads',
             category: 'HEALTHY',
             image: 'https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg',
             text:
