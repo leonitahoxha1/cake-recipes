@@ -139,4 +139,66 @@ function Contact() {
 
                 </div>
 
-             
+                {/* RIGHT */}
+
+                <div
+                    style={{
+                        background: 'white',
+
+                        padding: '35px',
+
+                        borderRadius: '20px',
+
+                        boxShadow:
+                            '0 5px 15px rgba(0,0,0,0.08)'
+                    }}
+                >
+
+                    <div
+                        style={{
+                            display: 'flex',
+                            gap: '20px',
+                            flexWrap: 'wrap'
+                        }}
+                    >
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            style={{
+                                flex: '1',
+                                padding: '15px',
+                                borderRadius: '12px',
+                                border: '1px solid #ddd',
+                                outline: 'none'
+                            }}
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            style={{
+                                flex: '1',
+                                padding: '15px',
+                                borderRadius: '12px',
+                                border: '1px solid #ddd',
+                                outline: 'none'
+                            }}
+                        />
+
+                    </div>
+
+                    <input
+                        type="text"
+                        placeholder="Subject"
+                        style={{
+                            width: '100%',
+                            padding: '15px',
+                            borderRadius: '12px',
+                            border: '1px solid #ddd',
+                            outline: 'none',
+                            marginTop: '20px',
+                            boxSizing: 'border-box'
+                        }}
+                    />
+
